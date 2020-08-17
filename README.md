@@ -37,5 +37,5 @@ dotnet run test.cs csharp.bin
 #Deleter calling
 #Deleter called
 
-diff golden.bin cscharp.bin
+diff golden.bin csharp.bin
 ```
