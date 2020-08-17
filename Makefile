@@ -7,3 +7,8 @@ dlpack: dlpack.c dlpack.h
 
 libdlpack.so: dlpack.c dlpack.h
 	$(CC) -o $@ $(SHAREDFLAGS) $< $(CFLAGS)
+
+clean:
+	rm dlpack libdlpack.so
+
+.PHONY: clean
