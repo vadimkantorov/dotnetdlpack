@@ -4,7 +4,7 @@ Hopefully there will be official bindings: https://github.com/dmlc/dlpack/issues
 
 Currently there is no example for constructing a DLPack tensor in C# and sending it to a C function.
 
-Limitations: due to [`ReadOnlySpan<T>`](https://docs.microsoft.com/en-us/dotnet/api/system.readonlyspan-1.-ctor?view=netcore-3.1#System_ReadOnlySpan_1__ctor_System_Void__System_Int32_) supporting only Int32 lengths, the `ROS<T>`-returning method is called `DataSpanLessThan2Gb()`. Issue: https://github.com/dotnet/corefxlab/issues/896 and https://github.com/dotnet/apireviews/tree/master/2016/11-04-SpanOfT#spant-and-64-bit
+Limitations: due to [`ReadOnlySpan<T>`](https://docs.microsoft.com/en-us/dotnet/api/system.readonlyspan-1.-ctor?view=netcore-3.1#System_ReadOnlySpan_1__ctor_System_Void__System_Int32_) supporting only Int32 lengths, the `ROS<T>`-returning method is called `DataSpanLessThan2Gb()`. Issues: https://github.com/dotnet/corefxlab/issues/896 and https://github.com/dotnet/apireviews/tree/master/2016/11-04-SpanOfT#spant-and-64-bit. This code assumes Linux, but could be made to work on Windows with a different Makefile.
 
 More advanced example with libtorch (using the same [`dlpack.cs`](./dlpack.cs): https://github.com/vadimkantorov/dotnetlibtorch
 
@@ -39,5 +39,5 @@ dotnet run test.cs csharp.bin
 #Deleter calling
 #Deleter called
 
-diff golden.bin cscharp.bin
+diff golden.bin csharp.bin
 ```
